@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (Main Site Tracking) -->
+    <!-- ONESIGNAL PUSH NOTIFICATIONS -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "3d88660b-b1d6-4ee0-89ff-b9b5ee40b28d", /* Make sure to use correct App ID for shctools.in if different */
+        });
+      });
+    </script> 
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8RJ9WQXJW"></script>
     <script>
          window.dataLayer = window.dataLayer || [];
@@ -14,21 +25,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- HIGH-IMPACT SEO TITLE & DESCRIPTION -->
-    <title>Free Image Resizer, PDF Compressor & Utilities | SHC Tools</title>
-    <meta name="description" content="Compress images to exactly 50KB, merge PDFs, and remove photo backgrounds instantly offline. The ultimate free tools directory for students and CSC VLEs.">
+    <title>Free Image Resizer, PDF Compressor & Photo Merger | SHC Tools</title>
+    <meta name="description" content="Compress images to 50KB, merge PDFs, and remove backgrounds instantly. 100% free, private, and offline alternative to premium cloud tools with no file limits.">
     <meta name="keywords" content="image resizer, compress image to 50kb, reduce image size in kb, pdf compressor, merge pdf online free, ilovepdf alternative, photo signature merger for rtps, pdf to jpg, background remover free, age calculator, CSC VLE tools, Vishal Kumar">
     
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://studenthelpclub.github.io/free-student-tools/" />
+    <link rel="canonical" href="https://shctools.in/" />
     
     <!-- OPEN GRAPH FOR SOCIAL MEDIA -->
-    <meta property="og:title" content="Free Image Resizer & PDF Tools - 100% Private">
+    <meta property="og:title" content="Free Image Resizer & PDF Tools - No Limits, 100% Private">
     <meta property="og:description" content="Compress photos, merge PDFs, and format exam documents directly in your browser. The fastest free utility suite for students.">
-    <meta property="og:image" content="https://www.studenthelpclub.in/shc-logo.jpg" />
-    <meta property="og:url" content="https://studenthelpclub.github.io/free-student-tools/">
+    <meta property="og:image" content="https://shctools.in/shc-logo.jpg" />
+    <meta property="og:url" content="https://shctools.in/">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="https://www.studenthelpclub.in/favicon.ico">
+    <link rel="icon" type="image/jpg" href="https://shctools.in/shc-logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -37,9 +48,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Student Help Club",
-      "url": "https://studenthelpclub.github.io/free-student-tools/",
-      "logo": "https://www.studenthelpclub.in/shc-logo.jpg"
+      "name": "Student Help Club Tools",
+      "url": "https://shctools.in/",
+      "logo": "https://shctools.in/shc-logo.jpg",
+      "sameAs": [
+        "https://www.youtube.com/@vishalhelpclub",
+        "https://t.me/studenthelpclub",
+        "https://whatsapp.com/channel/0029VbCJ2xI7IUYa1zMB6n1f"
+      ]
     }
     </script>
 
@@ -51,25 +67,34 @@
       "name": "Student Help Club Tools Collection",
       "description": "A complete suite of free online utility tools for students, including PDF editing, image resizing, and calculators.",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "Image Resizer", "url": "https://studenthelpclub.github.io/free-student-tools/image-resize.html", "applicationCategory": "MultimediaApplication", "description": "Compress and crop image formats to target KB specifications for academic registrations." } },
-        { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "PDF Resizer", "url": "https://studenthelpclub.github.io/free-student-tools/pdf-resize.html", "applicationCategory": "UtilitiesApplication", "description": "Reduce PDF file weights cleanly while securing proper content clarity standards." } },
-        { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "Image Background Remover", "url": "https://studenthelpclub.github.io/free-student-tools/image-bg-remover.html", "applicationCategory": "MultimediaApplication", "description": "Automatically extract portraits and remove complex background environments instantly inside your browser." } },
-        { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "Age Calculator", "url": "https://studenthelpclub.github.io/free-student-tools/age-calculator.html", "applicationCategory": "UtilitiesApplication", "description": "Compute precise structural biological age fields down to dates for recruitment rules." } },
-        { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "PDF Merge", "url": "https://studenthelpclub.github.io/free-student-tools/pdf-merge.html", "applicationCategory": "UtilitiesApplication", "description": "Combine multiple loose document streams together into a solid structured PDF file." } },
-        { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "Photo & Signature Merger", "url": "https://studenthelpclub.github.io/free-student-tools/photo-signature-merge.html", "applicationCategory": "MultimediaApplication", "description": "Merge passport photo and signature instantly with transparent background removal and compress to exact KB." } }
+        { "@type": "ListItem", "position": 1, "item": { "@type": "WebApplication", "name": "Image Resizer", "url": "https://shctools.in/image-resize.html", "applicationCategory": "MultimediaApplication" } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "WebApplication", "name": "PDF Resizer", "url": "https://shctools.in/pdf-resize.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "WebApplication", "name": "Image Background Remover", "url": "https://shctools.in/image-bg-remover.html", "applicationCategory": "MultimediaApplication" } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "WebApplication", "name": "Resume Builder", "url": "https://shctools.in/resume-builder.html", "applicationCategory": "BusinessApplication" } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "WebApplication", "name": "Instant Image Enhancer", "url": "https://shctools.in/enhance.html", "applicationCategory": "MultimediaApplication" } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "WebApplication", "name": "PDF Color Inverter", "url": "https://shctools.in/pdf-invert.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "WebApplication", "name": "Word Counter", "url": "https://shctools.in/word-counter.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "WebApplication", "name": "Age Calculator", "url": "https://shctools.in/age-calculator.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 9, "item": { "@type": "WebApplication", "name": "PDF Merge", "url": "https://shctools.in/pdf-merge.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 10, "item": { "@type": "WebApplication", "name": "Image to PDF", "url": "https://shctools.in/img-to-pdf.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 11, "item": { "@type": "WebApplication", "name": "PDF Split", "url": "https://shctools.in/pdf-split.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 12, "item": { "@type": "WebApplication", "name": "PDF to Image", "url": "https://shctools.in/pdf-to-img.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 13, "item": { "@type": "WebApplication", "name": "Percentage Calculator", "url": "https://shctools.in/percentage-calculator.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 14, "item": { "@type": "WebApplication", "name": "PAN Card Services", "url": "https://shctools.in/pan-service.html", "applicationCategory": "UtilitiesApplication" } },
+        { "@type": "ListItem", "position": 15, "item": { "@type": "WebApplication", "name": "Photo & Signature Merger", "url": "https://shctools.in/photo-signature-merge.html", "applicationCategory": "MultimediaApplication" } }
       ]
     }
     </script>
 
-    <!-- FAQ SCHEMA TO CAPTURE GOOGLE "PEOPLE ALSO ASK" RESULTS -->
+    <!-- FAQ SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "How to compress an image to 50KB?", "acceptedAnswer": { "@type": "Answer", "text": "Using the free SHC Image Resizer, simply upload your photo, enter '50' in the target KB box, and click resize. The tool will instantly compress your image to exactly 50KB or below for form uploads." } },
-        { "@type": "Question", "name": "Is Student Help Club a free alternative to premium PDF tools?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, SHC Tools provides a 100% free, offline browser-based alternative for merging PDFs, splitting pages, and compressing files without any premium limits or daily restrictions." } },
-        { "@type": "Question", "name": "How to merge photo and signature for RTPS forms?", "acceptedAnswer": { "@type": "Answer", "text": "Upload your photo and a picture of your signature to the SHC Photo & Signature Merger tool. It will automatically remove the background from the signature, place it under the photo, and compress it to exact KB limits for certificates." } }
+        { "@type": "Question", "name": "Is Student Help Club a free alternative to iLovePDF?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, SHC Tools provides a 100% free, browser-based alternative for merging PDFs, splitting pages, and compressing files without any premium limits or daily restrictions." } },
+        { "@type": "Question", "name": "How to merge photo and signature for RTPS?", "acceptedAnswer": { "@type": "Answer", "text": "Upload your photo and a picture of your signature to the SHC Photo & Signature Merger tool. It will automatically remove the background from the signature, place it under the photo, and compress it to 50KB for certificates." } }
       ]
     }
     </script>
@@ -102,10 +127,10 @@
         .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 20px; text-align: center; }
         .hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.2; }
         .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1.25rem; color: #cbd5e1; max-width: 850px; margin: 0 auto; font-weight: 500; }
+        .hero p { font-size: 1.25rem; color: #cbd5e1; max-width: 850px; margin: 0 auto 30px; font-weight: 500; }
         
         /* Main Container */
-        .container { max-width: 1200px; margin: -30px auto 60px; padding: 0 20px; position: relative; z-index: 10; }
+        .container { max-width: 1200px; margin: 40px auto 60px; padding: 0 20px; position: relative; z-index: 10; }
         
         /* Directory Layout */
         .directory-grid { display: grid; grid-template-columns: 280px 1fr; gap: 30px; }
@@ -120,13 +145,13 @@
         .sidebar ul li a i { width: 20px; text-align: center; }
 
         /* Tools Listing */
-        .tools-list { display: flex; flex-direction: column; gap: 40px; margin-top: 30px; }
+        .tools-list { display: flex; flex-direction: column; gap: 40px; }
         
         .category-section h2 { font-size: 1.6rem; color: var(--dark); margin-bottom: 20px; font-weight: 800; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
         
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
         
-        /* Tool Cards */
+        /* Powerful Backlink Cards */
         .tool-card { display: flex; align-items: flex-start; gap: 18px; background: white; padding: 22px; border-radius: 16px; text-decoration: none; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: var(--transition); }
         .tool-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0, 177, 79, 0.08); }
         
@@ -136,48 +161,44 @@
         .launch-btn { font-size: 0.85rem; font-weight: 700; color: var(--primary); display: inline-flex; align-items: center; gap: 5px; }
         .tool-card:hover .launch-btn { color: var(--primary-hover); }
 
-        /* SEO Content Block */
+        /* Massive SEO Content Block */
         .seo-block { background: white; padding: 40px; border-radius: 20px; border: 1px solid var(--border-color); margin-top: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); width: 100%; }
         .seo-block h2 { font-size: 2rem; color: var(--dark); margin-bottom: 20px; font-weight: 800; letter-spacing: -0.5px; }
         .seo-block h3 { font-size: 1.35rem; color: var(--dark); margin-top: 35px; margin-bottom: 15px; font-weight: 800; border-left: 4px solid var(--primary); padding-left: 15px; }
-        .seo-block p { font-size: 1rem; margin-bottom: 15px; line-height: 1.7; color: #475569; }
-        .seo-block ul { margin-left: 20px; margin-bottom: 20px; color: #475569; }
-        .seo-block li { margin-bottom: 10px; font-size: 1rem; line-height: 1.6; }
+        .seo-block p { font-size: 1rem; margin-bottom: 15px; line-height: 1.7; }
+        .seo-block ul { margin-left: 20px; margin-bottom: 20px; }
+        .seo-block li { margin-bottom: 12px; font-size: 1rem; font-weight: 500; line-height: 1.6; }
         .seo-block strong { color: var(--dark); }
         
         .compare-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 16px; padding: 25px; margin: 25px 0; }
         .compare-box h4 { font-size: 1.15rem; color: var(--dark); margin-bottom: 15px; font-weight: 800; }
         .compare-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .compare-item { display: flex; align-items: flex-start; gap: 10px; font-weight: 600; font-size: 0.95rem;}
+        .compare-item { display: flex; align-items: flex-start; gap: 10px; font-weight: 600; font-size: 0.95rem; }
         .compare-item.pro i { color: var(--primary); margin-top: 4px; }
         .compare-item.con i { color: #ef4444; margin-top: 4px; }
 
-        .footer { background: var(--dark); color: white; padding: 50px 20px 30px; text-align: center; margin-top: 60px; }
-        .footer a { color: #cbd5e1; text-decoration: none; margin: 0 15px; font-weight: 600; transition: var(--transition); font-size: 0.95rem;}
+        .footer { background: var(--dark); color: white; padding: 60px 20px 40px; text-align: center; margin-top: 60px; }
+        .footer a { color: #cbd5e1; text-decoration: none; margin: 0 15px; font-weight: 600; transition: var(--transition); font-size: 0.95rem; }
         .footer a:hover { color: var(--primary); }
 
         @media (max-width: 992px) {
             .directory-grid { grid-template-columns: 1fr; }
-            .sidebar { position: static; margin-bottom: 10px; padding: 20px;}
+            .sidebar { position: static; margin-bottom: 20px; padding: 20px; }
             .sidebar ul { display: flex; flex-wrap: wrap; gap: 10px; }
             .sidebar ul li { margin-bottom: 0; }
             .sidebar ul li a { background: #f8fafc; border: 1px solid var(--border-color); }
         }
 
         @media (max-width: 768px) {
-            .header { padding: 15px 5%; flex-direction: column; gap: 15px;}
-            .hero { padding: 50px 15px; }
+            .header { padding: 15px 5%; flex-direction: column; gap: 15px; }
+            .hero { padding: 60px 20px; }
             .hero h1 { font-size: 2rem; }
             .hero p { font-size: 1.05rem; }
             .container { margin-top: 20px; }
-            
-            .tools-list { margin-top: 10px; }
             .tools-grid { grid-template-columns: 1fr; }
-            
-            .seo-block { padding: 25px 20px; margin-top: 40px;}
+            .seo-block { padding: 30px 20px; margin-top: 40px; }
             .seo-block h2 { font-size: 1.6rem; }
             .compare-list { grid-template-columns: 1fr; }
-            
             .footer a { display: block; margin: 10px 0; }
         }
     </style>
@@ -185,24 +206,24 @@
 <body>
 
     <header class="header">
-        <a href="https://studenthelpclub.github.io/free-student-tools/" class="brand">
-            <img src="https://www.studenthelpclub.in/shc-logo.jpg" alt="Student Help Club Logo" class="logo">
+        <a href="https://shctools.in/" class="brand">
+            <img src="https://shctools.in/shc-logo.jpg" alt="Student Help Club Logo" class="logo">
             <div class="brand-title">SHC Directory</div>
         </a>
-        <a href="https://www.studenthelpclub.in/" class="main-btn">Go to Main Website <i class="fas fa-arrow-right"></i></a>
+        <a href="https://studenthelpclub.in/" class="main-btn" target="_blank">Go to Main Website <i class="fas fa-arrow-right"></i></a>
     </header>
 
     <main>
         <section class="hero">
             <h1>Free Image Resizer, PDF Compressor & <span>Utility Tools</span></h1>
-            <p>The #1 directory for students and CSC VLEs. Compress photos to 50KB, merge PDFs, and auto-format offline without any premium limits.</p>
+            <p>The #1 directory for students and CSC VLEs. Compress photos to 50KB, merge PDFs, and auto-format Aadhaar offline without any premium limits.</p>
         </section>
 
         <div class="container">
             <div class="directory-grid">
                 
                 <!-- SIDEBAR NAVIGATION -->
-                <aside class="sidebar" aria-label="Tools Navigation">
+                <aside class="sidebar">
                     <h3>Quick Navigation</h3>
                     <ul>
                         <li><a href="#image-tools"><i class="fas fa-image"></i> Image & Photo Tools</a></li>
@@ -219,6 +240,7 @@
                     <section class="category-section" id="image-tools">
                         <h2><i class="fas fa-image" style="color: var(--primary);"></i> Image & Photo Optimization</h2>
                         <div class="tools-grid">
+                            <!-- RELATIVE LINKS FIXED HERE TO PREVENT BROKEN LINK ERRORS -->
                             <a href="image-resize.html" class="tool-card">
                                 <div class="tool-icon"><i class="fas fa-compress"></i></div>
                                 <div class="tool-info">
@@ -238,8 +260,8 @@
                             <a href="enhance.html" class="tool-card">
                                 <div class="tool-icon"><i class="fas fa-adjust"></i></div>
                                 <div class="tool-info">
-                                    <h3>Image Enhancer (HD)</h3>
-                                    <p>Upscale blurry scanned documents or low-light photos to crystal clear quality.</p>
+                                    <h3>Image Enhancer (4K)</h3>
+                                    <p>Upscale blurry scanned documents or low-light photos to crystal clear HD quality.</p>
                                     <span class="launch-btn">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -262,7 +284,7 @@
                                 <div class="tool-icon" style="color:#ef4444; background:#fef2f2;"><i class="fas fa-compress-arrows-alt"></i></div>
                                 <div class="tool-info">
                                     <h3>PDF Compressor</h3>
-                                    <p>Reduce heavy PDF file sizes for seamless portal uploads without losing text clarity.</p>
+                                    <p>Reduce heavy PDF file sizes for seamless university portal uploads without losing text clarity.</p>
                                     <span class="launch-btn" style="color:#ef4444;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -270,7 +292,7 @@
                                 <div class="tool-icon" style="color:#ef4444; background:#fef2f2;"><i class="fas fa-layer-group"></i></div>
                                 <div class="tool-info">
                                     <h3>PDF Merger</h3>
-                                    <p>Combine loose document pages, assignments, and certificates into one PDF.</p>
+                                    <p>Combine loose document pages, IGNOU assignments, and certificates into one PDF for free.</p>
                                     <span class="launch-btn" style="color:#ef4444;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -278,15 +300,23 @@
                                 <div class="tool-icon" style="color:#ef4444; background:#fef2f2;"><i class="fas fa-cut"></i></div>
                                 <div class="tool-info">
                                     <h3>PDF Splitter</h3>
-                                    <p>Extract specific important pages from large ebooks or government document PDFs.</p>
+                                    <p>Extract specific important pages from large ebooks or standard government document PDFs.</p>
                                     <span class="launch-btn" style="color:#ef4444;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
                             <a href="pdf-invert.html" class="tool-card">
                                 <div class="tool-icon" style="color:#ef4444; background:#fef2f2;"><i class="fas fa-moon"></i></div>
                                 <div class="tool-info">
-                                    <h3>PDF Dark Mode</h3>
+                                    <h3>PDF Dark Mode (Inverter)</h3>
                                     <p>Turn blinding white PDFs into eye-friendly dark mode for comfortable night reading.</p>
+                                    <span class="launch-btn" style="color:#ef4444;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
+                                </div>
+                            </a>
+                            <a href="pdf-to-img.html" class="tool-card">
+                                <div class="tool-icon" style="color:#ef4444; background:#fef2f2;"><i class="fas fa-images"></i></div>
+                                <div class="tool-info">
+                                    <h3>PDF to JPG</h3>
+                                    <p>Convert each page of a PDF document into high-resolution standalone image files.</p>
                                     <span class="launch-btn" style="color:#ef4444;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -300,15 +330,15 @@
                             <a href="age-calculator.html" class="tool-card">
                                 <div class="tool-icon" style="color:#d946ef; background:#fdf4ff;"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="tool-info">
-                                    <h3>Age Calculator</h3>
-                                    <p>Calculate exact age in years, months, and days for strict job recruitment forms.</p>
+                                    <h3>Advanced Age Calculator</h3>
+                                    <p>Calculate exact biological age in years, months, and days for strict job recruitment forms.</p>
                                     <span class="launch-btn" style="color:#d946ef;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
                             <a href="percentage-calculator.html" class="tool-card">
                                 <div class="tool-icon" style="color:#d946ef; background:#fdf4ff;"><i class="fas fa-percent"></i></div>
                                 <div class="tool-info">
-                                    <h3>Percentage Calculator</h3>
+                                    <h3>Grade & Percentage Calculator</h3>
                                     <p>Compute complex semester marks and total percentage aggregates instantly.</p>
                                     <span class="launch-btn" style="color:#d946ef;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
@@ -317,7 +347,7 @@
                                 <div class="tool-icon" style="color:#d946ef; background:#fdf4ff;"><i class="fas fa-keyboard"></i></div>
                                 <div class="tool-info">
                                     <h3>Text & Word Counter</h3>
-                                    <p>Track character limits and word density required for essay submissions.</p>
+                                    <p>Track character limits and word density required for essay submissions and online forms.</p>
                                     <span class="launch-btn" style="color:#d946ef;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -326,13 +356,13 @@
 
                     <!-- CSC & GOVT FORMS -->
                     <section class="category-section" id="csc-tools">
-                        <h2><i class="fas fa-landmark" style="color: #f97316;"></i> CSC VLE & Form Filling</h2>
+                        <h2><i class="fas fa-landmark" style="color: #f97316;"></i> CSC VLE & Career Tools</h2>
                         <div class="tools-grid">
                             <a href="photo-signature-merge.html" class="tool-card">
                                 <div class="tool-icon" style="color:#f97316; background:#fff7ed;"><i class="fas fa-user-edit"></i></div>
                                 <div class="tool-info">
                                     <h3>RTPS Photo & Sign Merger</h3>
-                                    <p>Merge photos with signatures for certificates at exactly 50KB offline.</p>
+                                    <p>Merge photos with signatures for Jati, Niwas, Aay Praman Patra at exactly 50KB offline.</p>
                                     <span class="launch-btn" style="color:#f97316;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -340,7 +370,7 @@
                                 <div class="tool-icon" style="color:#f97316; background:#fff7ed;"><i class="fas fa-file-invoice"></i></div>
                                 <div class="tool-info">
                                     <h3>ATS Resume Builder</h3>
-                                    <p>Create professional, single-page CVs formatted for automated job tracking systems.</p>
+                                    <p>Create highly professional, single-page CVs formatted to beat automated job tracking systems.</p>
                                     <span class="launch-btn" style="color:#f97316;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -348,7 +378,7 @@
                                 <div class="tool-icon" style="color:#f97316; background:#fff7ed;"><i class="fas fa-id-card"></i></div>
                                 <div class="tool-info">
                                     <h3>PAN Card Tracker</h3>
-                                    <p>Utility access to apply for a new PAN or track NSDL/UTI statuses securely.</p>
+                                    <p>Direct utility access to apply for a new PAN or track NSDL/UTI application statuses securely.</p>
                                     <span class="launch-btn" style="color:#f97316;">Launch Tool <i class="fas fa-external-link-alt"></i></span>
                                 </div>
                             </a>
@@ -358,43 +388,47 @@
                 </div>
             </div> 
 
-            <!-- HYPER-OPTIMIZED SEO CONTENT DIRECTORY -->
+            <!-- HYPER-OPTIMIZED SEO CONTENT DIRECTORY (FULL WIDTH) -->
             <article class="seo-block">
                 <h2>The Ultimate Image Resizer & PDF Compressor Alternative</h2>
-                <p>Welcome to the <strong>Student Help Club Tools Directory</strong>. If you are searching for an online <strong>Image Resizer</strong>, a <strong>PDF Compressor</strong>, or a tool to <strong>merge PDFs online for free</strong>, you have found the right platform. Designed primarily for Indian students, government job aspirants, and Village Level Entrepreneurs (CSC VLEs), our tools act as the perfect 100% free alternative to premium cloud-based platforms.</p>
+                <p>Welcome to the <strong>Student Help Club Master Directory</strong>. If you are searching for an online <strong>Image Resizer</strong>, a <strong>PDF Compressor</strong>, or a tool to <strong>merge PDFs online for free</strong>, you have found the right platform. Designed primarily for Indian students, government job aspirants, and Village Level Entrepreneurs (CSC VLEs), our tools act as the perfect 100% free alternative to premium cloud-based platforms like iLovePDF and Adobe Acrobat.</p>
 
                 <div class="compare-box">
-                    <h4>Why Choose SHC Tools Over Cloud Platforms?</h4>
+                    <h4>Why Choose SHC Over Cloud Tools (Like iLovePDF)?</h4>
                     <div class="compare-list">
-                        <div class="compare-item pro"><i class="fas fa-check-circle"></i> <span><strong>100% Private (Offline):</strong> Our tools run via JavaScript inside your browser. Your Aadhaar card and signatures never upload to our servers.</span></div>
-                        <div class="compare-item con"><i class="fas fa-times-circle"></i> <span><strong>Cloud Tools:</strong> Upload your highly sensitive personal documents to third-party databases.</span></div>
+                        <div class="compare-item pro"><i class="fas fa-check-circle"></i> <span><strong>100% Private (No Uploads):</strong> Our tools run via JavaScript inside your browser. Your documents and signatures never leave your device.</span></div>
+                        <div class="compare-item con"><i class="fas fa-times-circle"></i> <span><strong>Cloud Tools:</strong> Upload your highly sensitive personal documents to third-party server databases.</span></div>
                         
-                        <div class="compare-item pro"><i class="fas fa-check-circle"></i> <span><strong>No Limits:</strong> Compress an unlimited number of images or merge massive PDFs without encountering "upgrade to premium" paywalls.</span></div>
-                        <div class="compare-item con"><i class="fas fa-times-circle"></i> <span><strong>Cloud Tools:</strong> Restrict your tasks with daily file limits or file size caps.</span></div>
+                        <div class="compare-item pro"><i class="fas fa-check-circle"></i> <span><strong>No Size or Daily Limits:</strong> Compress an unlimited number of images or merge massive PDFs without encountering "upgrade to premium" paywalls.</span></div>
+                        <div class="compare-item con"><i class="fas fa-times-circle"></i> <span><strong>Cloud Tools:</strong> Restrict your tasks with daily file limits or file size caps (e.g., max 10MB).</span></div>
+                        
+                        <div class="compare-item pro"><i class="fas fa-check-circle"></i> <span><strong>Lightning Fast Offline Speed:</strong> Since there's no waiting time to upload or download files to a server, processing happens instantly in milliseconds.</span></div>
+                        <div class="compare-item con"><i class="fas fa-times-circle"></i> <span><strong>Cloud Tools:</strong> Require high-speed internet to upload heavy documents and wait for server queues.</span></div>
                     </div>
                 </div>
 
                 <h3>Crucial Tools for Form Filling (RTPS, SSC, UPSC)</h3>
-                <p>Applying for State and Central government jobs requires strict adherence to digital formatting rules. Through our portal, you can execute the following tasks flawlessly:</p>
+                <p>Applying for State and Central government jobs or certificates requires strict adherence to digital formatting rules. Through our portal, you can execute the following tasks flawlessly:</p>
                 <ul>
-                    <li><strong>RTPS Bihar Formatting:</strong> Creating Jati, Niwas, and Aay certificates requires a photograph merged perfectly with a signature. Our specialized <em>Photo & Signature Merger</em> automates this and compresses the final document under the mandatory 50KB limit instantly.</li>
-                    <li><strong>Identity Card Merging:</strong> Align, crop, and combine the front and back sides of identification documents into a single printable PDF or JPG for seamless verification uploads.</li>
+                    <li><strong>RTPS Bihar Formatting:</strong> Creating Jati (Caste), Niwas (Domicile), and Aay (Income) certificates requires a photograph merged perfectly with a signature. Our specialized <em>Photo & Signature Merger</em> automates background removal and compresses the final document under the mandatory 50KB limit instantly.</li>
+                    <li><strong>Identity Card Merging:</strong> Use the PRO Aadhaar tool to easily align, crop, and combine the front and back sides of identification documents into a single, printable A4-style PDF or JPG for seamless verification uploads.</li>
                     <li><strong>Exam Document Compression:</strong> Need to compress images to exactly 20KB or 50KB? Our <em>Image Resizer</em> allows you to target a specific KB output, making it perfect for SSC, Railway, and UPSC portal acceptance.</li>
                 </ul>
 
-                <h3>Comprehensive Academic Support</h3>
-                <p>Beyond digital utilities, Student Help Club serves as an expansive educational platform. We provide dedicated resources for distance learning institutions, including high-quality solved assignments for IGNOU. Our main platform also hosts a dedicated Sarkari Job Portal, ensuring students receive the latest government vacancies, admit card releases, and merit lists.</p>
+                <h3>Comprehensive Academic Support: IGNOU & Beyond</h3>
+                <p>Beyond digital utilities, Student Help Club serves as an expansive educational platform. We provide dedicated resources for distance learning institutions, including high-quality solved assignments for <strong>IGNOU (Indira Gandhi National Open University)</strong>. Our platform also hosts a dedicated <em>Sarkari Job Portal</em>, ensuring students receive the latest notifications regarding government vacancies, syllabus breakdowns, admit card releases, and merit lists without any delay.</p>
             </article>
 
         </div>
     </main>
 
     <footer class="footer">
-        <h3 style="margin-bottom: 20px; font-weight: 800; font-size: 1.5rem;">Student Help Club</h3>
+        <h3 style="margin-bottom: 20px; font-weight: 800; font-size: 1.5rem;">Student Help Club Tools</h3>
         <div>
-            <a href="https://www.studenthelpclub.in/privacy-policy.html">Privacy Policy</a>
-            <a href="https://www.studenthelpclub.in/about.html">About Us</a>
-            <a href="https://www.studenthelpclub.in/contact.html">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms of Service</a>
         </div>
         <p style="margin-top: 30px; font-size: 0.95rem; color: #94a3b8;">&copy; 2026 Student Help Club. Empowering Digital India.</p>
     </footer>
