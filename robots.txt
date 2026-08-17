@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studenthelpclub.github.io/free-student-tools/sitemap.xml
